@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MATÉRIA — Para sentir a casa</title>
+<meta name="description" content="MATÉRIA — objetos, aromas e texturas para sentir a casa. usemateria.com.br">
+<style>
+:root{
+  --sand:#f2eee5;
+  --sand-2:#e9e1d2;
+  --ink:#17345e;
+  --ink-soft:#47607d;
+  --white:#fffdf8;
+  --mare:#8ea7c8;
+  --brisa:#eadf9a;
+  --brasa:#c45a3a;
+  --raiz:#7a5b47;
+  --line:rgba(23,52,94,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.site-shell{overflow:hidden}
+.header{position:fixed;inset:0 0 auto 0;z-index:50;padding:18px 5vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(242,238,229,.96),rgba(242,238,229,.72),transparent);backdrop-filter:blur(3px)}
+.logo{font-family:Georgia,'Times New Roman',serif;letter-spacing:.18em;font-size:21px;font-weight:500}
+.menu{display:flex;gap:26px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.menu a{opacity:.76}.menu a:hover{opacity:1}
+.pill{border:1px solid var(--ink);border-radius:999px;padding:10px 15px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.hero{min-height:100vh;padding:118px 5vw 48px;display:grid;grid-template-columns:1.02fr .98fr;gap:5vw;align-items:center}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;margin:0 0 22px}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;margin:0}
+h1{font-size:clamp(62px,8.3vw,130px);line-height:.88;letter-spacing:-.045em;max-width:8ch}
+.hero-copy{position:relative;z-index:2}
+.hero-text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(19px,2vw,30px);line-height:1.35;max-width:570px;margin:28px 0;color:#29466b}
+.hero-meta{display:flex;align-items:center;gap:24px;margin-top:34px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--white);border-radius:999px;padding:15px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.signature{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.66}
+.hero-visual{position:relative;min-height:650px}
+.photo-frame{position:absolute;overflow:hidden;background:#d8d1c6;box-shadow:0 20px 60px rgba(30,38,52,.08)}
+.photo-large{width:72%;height:78%;right:0;top:3%;border-radius:160px 160px 28px 28px;background:linear-gradient(145deg,#b5c7d7 0%,#7393b3 45%,#d8d9d5 100%)}
+.photo-small{width:43%;height:43%;left:0;bottom:0;border-radius:26px;background:linear-gradient(150deg,#d9b390 0%,#b87755 55%,#6e4938 100%);border:10px solid var(--sand)}
+.sun{position:absolute;width:170px;height:170px;border-radius:50%;background:#efe4a8;right:56%;top:5%;filter:blur(.2px)}
+.arch{position:absolute;inset:auto 11% 8% auto;width:58%;height:58%;border:1px solid rgba(255,255,255,.45);border-radius:140px 140px 25px 25px}
+.candle-scene{position:absolute;inset:14% 14% 8% 15%;display:flex;align-items:flex-end;justify-content:center;gap:18px}
+.candle{width:126px;height:190px;border-radius:8px 8px 24px 24px;background:linear-gradient(#efe9df,#d8d0c4);position:relative;box-shadow:0 24px 35px rgba(28,44,61,.16)}
+.candle:before{content:"";position:absolute;left:50%;top:-20px;width:3px;height:29px;background:#3f362f;transform:translateX(-50%)}
+.flame{position:absolute;left:50%;top:-50px;width:18px;height:34px;border-radius:55% 45% 60% 40%;background:#e9b04e;transform:translateX(-50%) rotate(8deg);box-shadow:0 0 24px rgba(242,192,78,.65)}
+.jar{width:98px;height:250px;border-radius:34px 34px 20px 20px;background:linear-gradient(90deg,rgba(243,239,229,.55),rgba(255,255,255,.82));border:1px solid rgba(255,255,255,.58);position:relative}
+.jar:before{content:"";position:absolute;left:35%;top:-92px;width:3px;height:110px;background:#705f4e;box-shadow:11px 0 #705f4e,22px -5px #705f4e,33px 4px #705f4e}
+.label{position:absolute;left:16px;right:16px;top:77px;padding:18px 10px;background:rgba(242,238,229,.86);text-align:center;color:var(--ink);font-family:Georgia,'Times New Roman',serif;font-size:13px;letter-spacing:.14em}
+.mini-label{display:block;font-family:Arial,Helvetica,sans-serif;font-size:7px;letter-spacing:.18em;margin-top:8px}
+.intro{padding:120px 5vw 110px;border-top:1px solid var(--line);display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:start}
+.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin:6px 0 0}
+.intro h2{font-size:clamp(44px,6vw,86px);line-height:.98;letter-spacing:-.03em;max-width:10ch}
+.intro-copy{font-family:Georgia,'Times New Roman',serif;font-size:clamp(20px,2.1vw,31px);line-height:1.5;margin:34px 0 0;max-width:760px;color:#304c6f}
+.collections{padding:0 5vw 120px}
+.collection{min-height:580px;margin-bottom:28px;border-radius:32px;overflow:hidden;display:grid;grid-template-columns:.78fr 1.22fr;position:relative}
+.collection-copy{padding:56px;display:flex;flex-direction:column;justify-content:space-between}
+.collection-num{font-size:10px;letter-spacing:.18em}
+.collection h3{font-size:clamp(65px,8vw,124px);line-height:.9;letter-spacing:-.05em;margin-top:18px}
+.collection p{max-width:410px;line-height:1.6;font-size:15px}
+.notes{font-size:11px!important;letter-spacing:.09em;text-transform:uppercase;line-height:1.8!important}
+.collection-art{position:relative;overflow:hidden;min-height:460px}
+.collection-art:before,.collection-art:after{content:"";position:absolute;border-radius:50%}
+.mare{background:#dce6ef}.mare .collection-art{background:linear-gradient(160deg,#a9c0d3,#7b9ab7 55%,#c4d5de)}
+.mare .collection-art:before{width:520px;height:180px;left:-5%;bottom:14%;border-radius:50%;border:1px solid rgba(255,255,255,.6);box-shadow:0 34px 0 -1px rgba(255,255,255,.32),0 68px 0 -1px rgba(255,255,255,.18)}
+.mare .collection-art:after{width:170px;height:170px;background:rgba(240,233,203,.84);right:13%;top:12%}
+.brisa{background:#f0e8b8}.brisa .collection-art{background:linear-gradient(160deg,#eee1a5,#d4c276 58%,#efe6b7)}
+.brisa .collection-art:before{width:450px;height:450px;background:rgba(255,251,234,.42);left:10%;top:8%;filter:blur(2px)}
+.brisa .collection-art:after{width:240px;height:420px;border:1px solid rgba(77,66,31,.24);right:8%;bottom:-9%;border-radius:130px 130px 0 0}
+.brasa{background:#d77556;color:#fff8f2}.brasa .collection-art{background:linear-gradient(160deg,#d77b58,#a64431 58%,#662e28)}
+.brasa .collection-art:before{width:350px;height:350px;background:#f0b45d;left:8%;bottom:-18%;filter:blur(3px)}
+.brasa .collection-art:after{width:210px;height:330px;border:1px solid rgba(255,255,255,.42);right:13%;top:12%;border-radius:105px 105px 22px 22px}
+.raiz{background:#8a6a55;color:#fff8ef}.raiz .collection-art{background:linear-gradient(160deg,#9d8068,#70513f 58%,#4c382f)}
+.raiz .collection-art:before{width:420px;height:420px;background:rgba(206,185,151,.24);left:5%;top:10%}
+.raiz .collection-art:after{width:280px;height:390px;border:1px solid rgba(255,255,255,.32);right:11%;bottom:-4%;border-radius:40% 40% 18px 18px}
+.vessel-ghost{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:170px;height:300px;border-radius:85px 85px 28px 28px;background:rgba(255,255,255,.32);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(3px)}
+.vessel-ghost:after{content:"MATÉRIA";position:absolute;left:18px;right:18px;top:116px;padding:20px 5px;text-align:center;background:rgba(244,239,226,.78);color:var(--ink);font-family:Georgia,'Times New Roman',serif;letter-spacing:.16em;font-size:12px}
+.products{padding:110px 5vw;border-top:1px solid var(--line)}
+.products-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
+.products h2{font-size:clamp(48px,6vw,86px);line-height:1;letter-spacing:-.035em;max-width:9ch}
+.products-note{font-size:12px;max-width:360px;line-height:1.55;color:var(--ink-soft)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product-card{background:rgba(255,255,255,.34);border-radius:24px;padding:14px 14px 24px}
+.product-image{aspect-ratio:4/5;border-radius:18px;position:relative;overflow:hidden;background:#d6cdc0}
+.product-image.one{background:linear-gradient(160deg,#d6e1e8,#91a9bd)}
+.product-image.two{background:linear-gradient(160deg,#efe5b7,#cab56c)}
+.product-image.three{background:linear-gradient(160deg,#d8b292,#8b5d49)}
+.product-shape{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:42%;height:56%;border-radius:48% 48% 18% 18%;background:rgba(250,246,236,.72);box-shadow:0 25px 45px rgba(32,43,53,.12)}
+.product-shape:after{content:"MATÉRIA";position:absolute;left:12%;right:12%;top:45%;padding:12px 5px;text-align:center;background:rgba(242,238,229,.9);color:var(--ink);font-family:Georgia,'Times New Roman',serif;font-size:10px;letter-spacing:.12em}
+.product-card small{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin:20px 4px 8px}
+.product-card h4{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;margin:0 4px}
+.manifesto{padding:120px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:var(--ink);color:var(--white)}
+.manifesto h2{font-size:clamp(48px,6.2vw,88px);line-height:.98;letter-spacing:-.035em}
+.manifesto p{font-family:Georgia,'Times New Roman',serif;font-size:clamp(19px,2vw,28px);line-height:1.55;color:#dfe6ee}
+.manifesto .tiny{font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#f2eee5}
+.footer{padding:70px 5vw 48px;background:#102b4d;color:#f7f3ea;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.footer-brand{font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,5vw,72px);letter-spacing:.08em}
+.footer-tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:12px}
+.footer-links{text-align:right;font-size:11px;line-height:1.9;letter-spacing:.08em}
+@media (max-width:900px){
+  .menu{display:none}.header{padding:16px 20px}.pill{padding:9px 12px}
+  .hero{grid-template-columns:1fr;padding:104px 20px 54px;gap:38px;min-height:auto}
+  h1{font-size:clamp(66px,19vw,96px);max-width:7ch}
+  .hero-text{font-size:21px;max-width:34ch}
+  .hero-visual{min-height:500px}.photo-large{width:78%;height:79%}.photo-small{width:49%;height:42%}.sun{width:120px;height:120px;right:63%}
+  .candle{width:96px;height:155px}.jar{width:78px;height:210px}.jar:before{top:-78px;height:96px}
+  .intro{grid-template-columns:1fr;padding:88px 20px 78px;gap:26px}.intro h2{font-size:52px}.intro-copy{font-size:20px;margin-top:10px}
+  .collections{padding:0 14px 86px}.collection{grid-template-columns:1fr;min-height:0;border-radius:24px;margin-bottom:16px}.collection-copy{padding:34px 28px 28px;min-height:360px}.collection h3{font-size:80px}.collection-art{min-height:360px}
+  .products{padding:86px 20px}.products-top{display:block}.products h2{font-size:54px}.products-note{margin-top:18px}.product-grid{grid-template-columns:1fr;gap:16px}.product-image{aspect-ratio:5/4}.product-shape{width:31%;height:62%}
+  .manifesto{grid-template-columns:1fr;padding:90px 20px;gap:32px}.manifesto h2{font-size:53px}.manifesto p{font-size:20px}
+  .footer{grid-template-columns:1fr;padding:58px 20px 38px}.footer-links{text-align:left}
+}
+@media (max-width:480px){
+  .logo{font-size:18px}.pill{font-size:9px}
+  .hero{padding-top:96px}.eyebrow{margin-bottom:16px}.hero-meta{margin-top:26px}
+  .hero-visual{min-height:440px}.photo-large{height:80%;border-radius:110px 110px 22px 22px}.photo-small{height:39%;border-width:7px}.candle-scene{inset:18% 8% 7% 12%;gap:10px}.candle{width:78px;height:128px}.jar{width:64px;height:176px}.label{left:8px;right:8px;top:58px;padding:12px 4px;font-size:10px}.mini-label{font-size:6px}
+  .collection h3{font-size:68px}.collection-copy{min-height:335px}.collection-art{min-height:320px}
+}
+</style>
+</head>
+<body>
+<div class="site-shell">
+<header class="header">
+  <a href="#top" class="logo">MATÉRIA</a>
+  <nav class="menu"><a href="#colecoes">Coleções</a><a href="#produtos">Objetos</a><a href="#sobre">Sobre</a></nav>
+  <a class="pill" href="#colecoes">Descobrir</a>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">PARA SENTIR A CASA</p>
+    <h1>Casa também se sente.</h1>
+    <p class="hero-text">Aromas, formas e objetos que transformam pequenos rituais em presença.</p>
+    <div class="hero-meta"><a class="button" href="#colecoes">Conhecer as coleções</a><span class="signature">por Luana Fernandez</span></div>
+  </div>
+  <div class="hero-visual" aria-label="Composição conceitual da MATÉRIA">
+    <div class="sun"></div>
+    <div class="photo-frame photo-large"><div class="arch"></div><div class="candle-scene"><div class="candle"><div class="flame"></div><div class="label">MATÉRIA<span class="mini-label">PARA SENTIR A CASA</span></div></div><div class="jar"><div class="label">MATÉRIA<span class="mini-label">RAIZ · ORIGENS</span></div></div></div></div>
+    <div class="photo-frame photo-small"></div>
+  </div>
+</section>
+<section class="intro">
+  <p class="kicker">A essência da MATÉRIA</p>
+  <div><h2>Quatro elementos.<br>Quatro formas de habitar.</h2><p class="intro-copy">Água, ar, fogo e terra traduzidos em fragrâncias, velas e objetos autorais. Uma casa que não é apenas vista — é sentida.</p></div>
+</section>
+<section class="collections" id="colecoes">
+  <article class="collection mare"><div class="collection-copy"><div><span class="collection-num">01 · ÁGUA</span><h3>MARÉ</h3><p>Fresca, fluida e delicadamente adocicada. Uma coleção que lembra pele salgada, roupa limpa e janela aberta.</p></div><p class="notes">Brisa do mar · algodão · cascas e folhas</p></div><div class="collection-art"><div class="vessel-ghost"></div></div></article>
+  <article class="collection brisa"><div class="collection-copy"><div><span class="collection-num">02 · AR</span><h3>BRISA</h3><p>Clara, leve e luminosa. Uma presença suave que atravessa a casa sem pesar.</p></div><p class="notes">Summer · âmbar · leite de amêndoas · bergamota</p></div><div class="collection-art"><div class="vessel-ghost"></div></div></article>
+  <article class="collection brasa"><div class="collection-copy"><div><span class="collection-num">03 · FOGO</span><h3>BRASA</h3><p>Quente, intensa e envolvente. Para ambientes com presença, textura e calor.</p></div><p class="notes">Macadâmia · pimenta rosa · leite de amêndoas</p></div><div class="collection-art"><div class="vessel-ghost"></div></div></article>
+  <article class="collection raiz"><div class="collection-copy"><div><span class="collection-num">04 · TERRA</span><h3>RAIZ</h3><p>Profunda, terrosa e acolhedora. Madeira, chão molhado e memória em estado de casa.</p></div><p class="notes">Noz-moscada · terra molhada · baunilha</p></div><div class="collection-art"><div class="vessel-ghost"></div></div></article>
+</section>
+<section class="products" id="produtos">
+  <div class="products-top"><div><p class="kicker">OBJETOS PARA SENTIR</p><h2>Feitos para entrar na rotina.</h2></div><p class="products-note">Aqui entram suas fotos reais quando os primeiros produtos estiverem prontos. A estrutura já está preparada para trocar imagem, nome e descrição sem refazer o site.</p></div>
+  <div class="product-grid">
+    <article class="product-card"><div class="product-image one"><div class="product-shape"></div></div><small>Velas</small><h4>Luz, aroma e permanência.</h4></article>
+    <article class="product-card"><div class="product-image two"><div class="product-shape"></div></div><small>Difusores</small><h4>Perfume que habita o espaço.</h4></article>
+    <article class="product-card"><div class="product-image three"><div class="product-shape"></div></div><small>Objetos</small><h4>Peças autorais para compor a casa.</h4></article>
+  </div>
+</section>
+<section class="manifesto" id="sobre">
+  <div><p class="tiny">MATÉRIA · por Luana Fernandez</p><h2>O que fica na casa também fica na memória.</h2></div>
+  <p>MATÉRIA nasce para criar presença sem excesso. Objetos, aromas e texturas que convivem com a casa, com o tempo e com quem mora nela.</p>
+</section>
+</main>
+<footer class="footer"><div><div class="footer-brand">MATÉRIA</div><div class="footer-tag">PARA SENTIR A CASA</div></div><div class="footer-links"><div>usemateria.com.br</div><div>@use_materia</div><div>São Paulo · Brasil</div></div></footer>
+</div>
+</body>
+</html>
