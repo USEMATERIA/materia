@@ -76,7 +76,10 @@
     .nav-dropdown{position:relative}
     .nav-dropdown-toggle{
       border:0;background:transparent;color:inherit;cursor:pointer;
-      font:inherit;letter-spacing:inherit;text-transform:inherit;padding:0 0 6px;
+      font:inherit;letter-spacing:inherit;text-transform:inherit;
+      padding:0;
+      line-height:1.5;
+      display:block;
     }
     .nav-dropdown-menu{
       position:absolute;top:28px;left:-18px;min-width:190px;padding:18px;
@@ -183,7 +186,13 @@
       font-size:15px;
       line-height:1.8;
     }
-    .universe-symbol{width:86px;height:auto;object-fit:contain;margin:34px auto 0;opacity:.92;}
+    .universe-symbol{
+      width:min(270px,42vw);
+      height:auto;
+      object-fit:contain;
+      margin:38px auto 0;
+      opacity:.96;
+    }
 
     .editorial{
       display:grid;
@@ -255,7 +264,7 @@
       overflow:hidden;
       background:#ddd;
     }
-    .collection-card img{transition:transform .7s ease}
+    .collection-card img{transition:transform .7s ease;object-position:center}
     .collection-card:hover img{transform:scale(1.035)}
     .collection-card::after{
       content:"";
@@ -302,6 +311,30 @@
       color:rgba(255,255,255,.75);
       line-height:1.9;
     }
+
+    .home-collection-names{
+      margin:34px auto 0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:11px;
+      font-family:"Italiana",serif;
+      font-size:clamp(23px,2.2vw,31px);
+      line-height:1.15;
+    }
+    .home-collection-names span{
+      scroll-margin-top:130px;
+    }
+    .home-collection-names small{
+      display:block;
+      margin-top:4px;
+      font-family:"DM Sans",sans-serif;
+      font-size:9px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      opacity:.62;
+    }
+
     .coming-soon{
       margin-top:34px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
       border-bottom:1px solid rgba(255,255,255,.55);display:inline-block;padding-bottom:6px;
@@ -431,7 +464,10 @@
       }
       .mobile-panel.open{display:flex}
       .mobile-panel span{color:#8b8b86;font-size:10px;margin-top:6px}
-      .mobile-panel a:nth-of-type(n+2):nth-of-type(-n+5){padding-left:16px}
+      .mobile-panel span + a,
+      .mobile-panel span + a + a,
+      .mobile-panel span + a + a + a,
+      .mobile-panel span + a + a + a + a{padding-left:16px}
       .hero{min-height:70vh}
       .hero-content{padding:0 7vw 9vh}
       .editorial{grid-template-columns:1fr}
@@ -475,7 +511,13 @@
             <a href="#brasa">Brasa</a>
           </div>
         </div>
-        <a href="#colecoes-casa">Coleções casa</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button">Coleções casa</button>
+          <div class="nav-dropdown-menu">
+            <a href="#entao-e-natal">Então é Natal</a>
+            <a href="#ano-novo-tambem">Ano Novo também</a>
+          </div>
+        </div>
       </div>
 
       <a class="brand" href="#nosso-universo">MATÉRIA</a>
@@ -493,7 +535,9 @@
         <a href="#brisa">Brisa</a>
         <a href="#raiz">Raiz</a>
         <a href="#brasa">Brasa</a>
-        <a href="#colecoes-casa">Coleções casa</a>
+        <span>Coleções casa</span>
+        <a href="#entao-e-natal">Então é Natal</a>
+        <a href="#ano-novo-tambem">Ano Novo também</a>
       </div>
     </nav>
   </header>
@@ -516,7 +560,7 @@
       <p>
         A MATÉRIA nasce do encontro entre a natureza, o fazer manual, histórias de vida e o desejo de transformar espaços em lugares que tenham significado.
       </p>
-      <img class="universe-symbol" src="materia-simbolo.png" alt="Símbolo MATÉRIA">
+      <img class="universe-symbol" src="materia-logo-transparente.png" alt="MATÉRIA — Para sentir a casa">
     </section>
 
     <section class="editorial">
@@ -545,7 +589,7 @@
 
       <div class="grid">
         <article class="collection-card" id="mare">
-          <img src="materia-mare.jpg" alt="Coleção Maré">
+          <img src="https://images.unsplash.com/photo-1599855568893-5521e40be121?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=2200" alt="Coleção Maré">
           <div class="collection-meta">
             <span>Água</span>
             <h3>Maré</h3>
@@ -554,7 +598,7 @@
         </article>
 
         <article class="collection-card" id="brisa">
-          <img src="materia-brisa.jpg" alt="Coleção Brisa">
+          <img src="https://images.unsplash.com/photo-1634665810235-011d663754e7?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxpbmVufGVufDB8fDB8fHww&ixlib=rb-4.0.3&q=80&w=2200" alt="Coleção Brisa">
           <div class="collection-meta">
             <span>Ar</span>
             <h3>Brisa</h3>
@@ -563,7 +607,7 @@
         </article>
 
         <article class="collection-card" id="raiz">
-          <img src="materia-raiz.jpg" alt="Coleção Raiz">
+          <img src="https://images.unsplash.com/photo-1570733374641-cfdf08f2f545?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&ixlib=rb-4.1.0&q=80&w=2200" alt="Coleção Raiz">
           <div class="collection-meta">
             <span>Terra</span>
             <h3>Raiz</h3>
@@ -572,7 +616,7 @@
         </article>
 
         <article class="collection-card" id="brasa">
-          <img src="materia-brasa.jpg" alt="Coleção Brasa">
+          <img src="https://images.unsplash.com/photo-1619378352777-1742dc62b564?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FuZGxlJTIwZmxhbWV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=80&w=2200" alt="Coleção Brasa">
           <div class="collection-meta">
             <span>Fogo</span>
             <h3>Brasa</h3>
@@ -586,7 +630,11 @@
       <div class="eyebrow">Coleções casa</div>
       <h2>Queremos criar a sensação de estar em casa.</h2>
       <p>Uma casa não precisa ser perfeita, precisa ter presença.</p>
-      <div class="coming-soon">Em breve</div>
+      <div class="home-collection-names">
+        <span id="entao-e-natal">Então é Natal <small>Em breve</small></span>
+        <span id="ano-novo-tambem">Ano Novo também <small>Em breve</small></span>
+      </div>
+      <div class="coming-soon">Coleções em desenvolvimento</div>
     </section>
   </main>
 
