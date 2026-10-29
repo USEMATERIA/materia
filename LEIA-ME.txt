@@ -1,7 +1,14 @@
-MATÉRIA — pacote de atualização do site
+MATÉRIA — pacote do site atualizado a partir do backup enviado
 
-Arquivos: index.html (página inicial) e mare.html, brisa.html, brasa.html, raiz.html (páginas de coleção).
+IMPORTANTE: este pacote preserva a identidade visual do index.html do backup (fundo areia, azul profundo, tipografia editorial e imagens/arquivos originais). O index(1).html foi mantido apenas como referência/backup.
 
-IMPORTANTE: os seletores de quantidade e o resumo são funcionais no navegador, mas este pacote ainda não integra carrinho, estoque, frete, checkout ou pagamento. O link de personalizados direciona ao Instagram @use_materia.
+Para publicar no GitHub Pages:
+1. Extraia este ZIP no computador.
+2. Envie os arquivos e imagens para a raiz do repositório, substituindo os arquivos antigos quando solicitado.
+3. Garanta que index.html fique na raiz do repositório publicado.
+4. Não envie apenas o ZIP.
+5. Em Settings > Pages, confira a branch/pasta usada na publicação e depois confira Actions para ver se publicou com sucesso.
 
-Para publicar, envie os cinco HTMLs para a mesma pasta/raiz do site no serviço de hospedagem atual, após fazer backup dos arquivos existentes. Não altere os DNS do domínio no Wix se o site atual já está funcionando.
+Páginas: index.html, mare.html, brisa.html, brasa.html e raiz.html.
+
+Os botões de pedido montam um resumo e permitem copiá-lo; a finalização ainda é feita manualmente pelo Instagram. Não há checkout ou pagamento integrado. Preços usados: difusor R$119,90; home spray R$99,90; água para lençóis R$79,90. Confirme os valores antes de publicar.
