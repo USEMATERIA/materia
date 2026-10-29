@@ -585,6 +585,12 @@
 .menu-mobile{display:none}
 @media(max-width:800px){.nav-left{gap:12px}.nav-right>a{display:none}.nav-tools{gap:10px}.nav .search-box input{width:70px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.nav-left{display:none}.nav{padding:15px 4%}.menu-mobile{display:block;border:0;background:transparent;color:var(--blue);font:inherit;text-transform:uppercase;font-size:10px;letter-spacing:.12em}.nav-tools .search-box{display:none}.product-grid{grid-template-columns:1fr}.brand{font-size:18px!important}}
+
+/* Ajustes de navegação MATÉRIA */
+.announcement{text-align:center!important;width:100%;display:flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;letter-spacing:.18em;font-size:10px;}
+.nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;}
+.nav-left{justify-self:start}.brand{justify-self:center;text-align:center;white-space:nowrap}.nav-right{justify-self:end}.nav-tools{gap:0!important}.icon-action{gap:0!important;padding:6px!important}.icon-action .cart-label{display:none!important}.cart-count{margin-left:5px}
+@media(max-width:800px){.nav{display:flex!important;justify-content:space-between!important}.brand{position:absolute;left:50%;transform:translateX(-50%);}.nav-left{display:none!important}.nav-right>a{display:none!important}.menu-mobile{margin-left:auto}.nav-tools{margin-left:0}}
 </style>
 </head>
 <body>
@@ -592,17 +598,17 @@
 <header><nav class="nav">
 <div class="nav-left">
 <div class="nav-dropdown"><a class="nav-dropdown-toggle" href="index.html#colecoes">Produtos</a><div class="nav-dropdown-menu">
-<a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a>
+<a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a>
 </div></div>
 <div class="nav-dropdown"><a class="nav-dropdown-toggle" href="index.html#colecoes">Coleções</a><div class="nav-dropdown-menu">
-<a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a>
+<a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a>
 </div></div>
 </div>
 <a class="brand" href="index.html">MATÉRIA</a>
 <div class="nav-right"><a href="index.html#nosso-universo">Nosso universo</a><a href="https://instagram.com/use_materia" rel="noopener" target="_blank">Instagram</a>
-<div class="nav-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input class="site-search" type="search" placeholder="Buscar" aria-label="Buscar produtos e coleções" /></label><button class="icon-action" type="button" onclick="openCart()" aria-label="Abrir carrinho"><span aria-hidden="true">♧</span><span class="cart-label">Carrinho</span><span class="cart-count">0</span></button></div></div>
+<div class="nav-tools"><button class="icon-action" type="button" onclick="openCart()" aria-label="Abrir carrinho"><svg aria-hidden="true" width="21" height="23" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l1.2 15H3.8L5 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg><span class="cart-count">0</span></button></div></div>
 <button class="menu-mobile" type="button" onclick="document.getElementById('mobile-panel').classList.toggle('open')">Menu</button>
-</nav><div class="mobile-panel" id="mobile-panel"><a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a><a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a><a href="index.html#nosso-universo">Nosso universo</a></div></header>
+</nav><div class="mobile-panel" id="mobile-panel"><a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a><a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a><a href="index.html#nosso-universo">Nosso universo</a></div></header>
 <main>
 <section class="hero">
 <div class="hero-content">
