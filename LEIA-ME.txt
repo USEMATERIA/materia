@@ -12,3 +12,12 @@ Para publicar no GitHub Pages:
 Páginas: index.html, mare.html, brisa.html, brasa.html e raiz.html.
 
 Os botões de pedido montam um resumo e permitem copiá-lo; a finalização ainda é feita manualmente pelo Instagram. Não há checkout ou pagamento integrado. Preços usados: difusor R$119,90; home spray R$99,90; água para lençóis R$79,90. Confirme os valores antes de publicar.
+
+
+ATUALIZAÇÕES DESTA VERSÃO
+- Tipografia unificada em DM Sans, a mesma fonte usada no parágrafo de apresentação da MATÉRIA.
+- Menu Coleções olfativas leva à listagem e mantém submenu por hover/foco.
+- Busca por coleções e carrinho lateral compartilhado entre as páginas.
+- Nas páginas das coleções, quantidade com botões +/− e botão Adicionar ao carrinho.
+- O resumo antigo do pedido foi removido; o carrinho permite alterar quantidades e remover itens.
+- A finalização ainda é encaminhada ao Instagram; não há checkout/pagamento integrado.
