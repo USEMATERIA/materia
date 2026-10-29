@@ -1,0 +1,87 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore os home spray das quatro coleções olfativas da MATÉRIA e encontre o aroma que combina com a sua casa."><title>MATÉRIA — Home spray</title><style>:root{--blue:#18304a;--sand:#f2ede4;--sand-light:#f8f5ef;--ink:#25282a;--muted:#6f706d;--line:rgba(24,48,74,.16)}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--sand-light);line-height:1.5}
+.nav{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 5%;border-bottom:1px solid var(--line);background:var(--sand-light);z-index:20}
+.nav-left,.nav-right,.nav-tools{display:flex;align-items:center;gap:20px}
+.nav a{color:var(--blue);text-decoration:none;text-transform:uppercase;font-size:10px;letter-spacing:.12em}
+.brand{font-size:22px!important;letter-spacing:.18em!important}
+.nav-dropdown{position:relative;padding:12px 0}
+.nav-dropdown-menu{position:absolute;left:0;top:100%;min-width:220px;padding:10px 0;background:var(--sand-light);border:1px solid var(--line);box-shadow:0 12px 30px #0001;display:none;z-index:80}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:flex;flex-direction:column}
+.nav-dropdown-menu a{padding:12px 18px;white-space:nowrap}
+.nav-dropdown-menu a:hover,.mobile-panel a:hover{background:var(--sand)}
+.search-box{display:flex;align-items:center;border-bottom:1px solid var(--line);gap:6px;padding:5px 0;position:relative}
+.search-box input{width:105px;min-width:70px;border:0;outline:0;background:transparent;color:inherit;font:inherit;font-size:11px;text-transform:none}
+.search-results{position:absolute;right:0;top:calc(100% + 12px);width:min(320px,85vw);max-height:65vh;overflow:auto;background:var(--sand-light);border:1px solid var(--line);box-shadow:0 12px 35px #0002;z-index:200}
+.search-result{display:flex;flex-direction:column;gap:3px;padding:12px 15px;border-bottom:1px solid var(--line);font-size:13px!important;text-transform:none!important;letter-spacing:normal!important}
+.search-result small,.search-no-results{font-size:11px;color:var(--muted)}
+.search-no-results{padding:15px}
+.icon-action{border:0;background:transparent;color:var(--blue);cursor:pointer;display:flex;gap:8px;align-items:center;font:inherit;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+.cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:19px;height:19px;padding:0 5px;border-radius:50%;background:var(--blue);color:#fff;font-size:10px}
+.cart-overlay{position:fixed;inset:0;background:rgba(20,25,28,.35);z-index:100;opacity:0;visibility:hidden;transition:.25s}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-drawer{position:fixed;right:0;top:0;height:100dvh;width:min(460px,100%);background:var(--sand-light);z-index:101;transform:translateX(102%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-15px 0 45px rgba(0,0,0,.12)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{padding:26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.cart-head h2{font-size:26px;font-weight:400;color:var(--blue)}
+.cart-close{border:0;background:transparent;font-size:27px;cursor:pointer;color:var(--blue)}
+.cart-items{padding:8px 26px;overflow:auto;flex:1}
+.cart-empty{padding:35px 0;color:var(--muted);font-size:14px}
+.cart-item{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:12px}
+.cart-item h3{font-size:15px;font-weight:400;color:var(--blue);margin-bottom:5px}
+.cart-item p{font-size:12px;color:var(--muted)}
+.cart-item-controls{display:flex;align-items:center;gap:9px;margin-top:10px}
+.cart-item-controls button{width:30px;height:30px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:18px;color:var(--blue)}
+.cart-item-controls .remove-item{border:0;width:auto;font-size:11px;text-decoration:underline;margin-left:8px}
+.cart-foot{padding:22px 26px 28px;border-top:1px solid var(--line)}
+.cart-total{display:flex;justify-content:space-between;font-size:17px;color:var(--blue);margin-bottom:18px}
+.cart-checkout{width:100%;border:0;background:var(--blue);color:#fff;padding:16px;cursor:pointer;font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.cart-foot small{display:block;color:var(--muted);font-size:11px;line-height:1.6;margin-top:12px}
+.product-page{max-width:1200px;margin:0 auto;padding:45px 5% 80px}
+.listing-heading{padding:55px 0 35px;max-width:700px}
+.listing-heading .eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.listing-heading h1{font-size:clamp(34px,5vw,58px);font-weight:400;color:var(--blue);margin:12px 0}
+.listing-heading p{max-width:600px;color:var(--muted)}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.2);display:flex;flex-direction:column;align-items:flex-start}
+.product-card h3{font-size:22px;font-weight:400;color:var(--blue);margin:8px 0}
+.product-card p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.price{font-size:18px;color:var(--blue);margin-top:auto;padding-top:12px}
+.add-cart{margin-top:12px;width:100%;padding:13px;background:transparent;border:1px solid var(--blue);color:var(--blue);font:inherit;font-size:10px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer}
+.add-cart:hover{background:var(--blue);color:white}
+.collection-chip{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.mobile-panel{display:none}
+.mobile-panel.open{display:flex;flex-direction:column;padding:10px 5%;gap:0;border-bottom:1px solid var(--line)}
+.mobile-panel a{padding:12px}
+.menu-mobile{display:none}
+@media(max-width:800px){.nav-left{gap:12px}.nav-right>a{display:none}.nav-tools{gap:10px}.nav .search-box input{width:70px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.nav-left{display:none}.nav{padding:15px 4%}.menu-mobile{display:block;border:0;background:transparent;color:var(--blue);font:inherit;text-transform:uppercase;font-size:10px;letter-spacing:.12em}.nav-tools .search-box{display:none}.product-grid{grid-template-columns:1fr}.brand{font-size:18px!important}}
+</style></head><body><div class="announcement">MATÉRIA — PARA SENTIR A CASA</div>
+<header><nav class="nav">
+<div class="nav-left">
+<div class="nav-dropdown"><a class="nav-dropdown-toggle" href="index.html#colecoes">Produtos</a><div class="nav-dropdown-menu">
+<a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a>
+</div></div>
+<div class="nav-dropdown"><a class="nav-dropdown-toggle" href="index.html#colecoes">Coleções</a><div class="nav-dropdown-menu">
+<a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a>
+</div></div>
+</div>
+<a class="brand" href="index.html">MATÉRIA</a>
+<div class="nav-right"><a href="index.html#nosso-universo">Nosso universo</a><a href="https://instagram.com/use_materia" rel="noopener" target="_blank">Instagram</a>
+<div class="nav-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input class="site-search" type="search" placeholder="Buscar" aria-label="Buscar produtos e coleções" /></label><button class="icon-action" type="button" onclick="openCart()" aria-label="Abrir carrinho"><span aria-hidden="true">♧</span><span class="cart-label">Carrinho</span><span class="cart-count">0</span></button></div></div>
+<button class="menu-mobile" type="button" onclick="document.getElementById('mobile-panel').classList.toggle('open')">Menu</button>
+</nav><div class="mobile-panel" id="mobile-panel"><a href="difusores.html">Difusor de ambiente</a><a href="home-spray.html">Home spray</a><a href="agua-lencois.html">Água de lençóis</a><a href="mare.html">Maré</a><a href="brisa.html">Brisa</a><a href="brasa.html">Brasa</a><a href="raiz.html">Raiz</a><a href="kits.html">Kits para presente</a><a href="personalizados.html">Personalizados</a><a href="index.html#nosso-universo">Nosso universo</a></div></header><main class="product-page"><div class="listing-heading"><p class="eyebrow">PRODUTOS · MATÉRIA</p><h1>Home spray</h1><p>Explore os home spray das quatro coleções olfativas da MATÉRIA e encontre o aroma que combina com a sua casa.</p><p style="margin-top:15px"><a href="index.html#colecoes" style="color:var(--blue)">Explorar coleções</a></p></div><section class="product-grid"><article class="product-card"><span class="collection-chip">Coleção Maré</span><h3>Home spray 200 ml</h3><p>Uma forma prática de renovar a atmosfera sempre que quiser. Fresca, luminosa e delicadamente adocicada.</p><div class="price">R$ 99,90</div><a class="add-cart" style="text-align:center;text-decoration:none" href="mare.html#produto-spray">Conhecer fragrância</a></article><article class="product-card"><span class="collection-chip">Coleção Brisa</span><h3>Home spray 200 ml</h3><p>Uma forma prática de renovar a atmosfera sempre que quiser. Leve, delicada e confortável.</p><div class="price">R$ 99,90</div><a class="add-cart" style="text-align:center;text-decoration:none" href="brisa.html#produto-spray">Conhecer fragrância</a></article><article class="product-card"><span class="collection-chip">Coleção Brasa</span><h3>Home spray 200 ml</h3><p>Uma forma prática de renovar a atmosfera sempre que quiser. Intensa, envolvente e marcante.</p><div class="price">R$ 99,90</div><a class="add-cart" style="text-align:center;text-decoration:none" href="brasa.html#produto-spray">Conhecer fragrância</a></article><article class="product-card"><span class="collection-chip">Coleção Raiz</span><h3>Home spray 200 ml</h3><p>Uma forma prática de renovar a atmosfera sempre que quiser. Amadeirada, frutada e terrosa.</p><div class="price">R$ 99,90</div><a class="add-cart" style="text-align:center;text-decoration:none" href="raiz.html#produto-spray">Conhecer fragrância</a></article></section></main><footer style="padding:30px 5%;border-top:1px solid var(--line);color:var(--muted);font-size:12px">MATÉRIA — PARA SENTIR A CASA · <a href="https://instagram.com/use_materia" style="color:var(--blue)">Instagram</a></footer><div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div><aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras" aria-hidden="true"><div class="cart-head"><h2>Seu carrinho</h2><button class="cart-close" onclick="closeCart()" aria-label="Fechar carrinho">×</button></div><div class="cart-items" id="cartItems"><p class="cart-empty">Seu carrinho está vazio por enquanto.</p></div><div class="cart-foot"><div class="cart-total"><span>Subtotal</span><strong id="cartTotal">R$ 0,00</strong></div><button class="cart-checkout" onclick="checkoutCart()">Continuar pelo Instagram</button><small>O subtotal não inclui frete. A finalização será combinada com a MATÉRIA pelo Instagram.</small></div></aside><script>
+const CART_KEY='materia_cart_v1';
+function money(n){return Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function readCart(){try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch(e){return []}}
+function saveCart(c){try{localStorage.setItem(CART_KEY,JSON.stringify(c))}catch(e){}renderCart()}
+function addToCart(name,price,collection,qty=1){qty=Number(qty)||1;const c=readCart(),key=collection+'|'+name,item=c.find(x=>x.key===key);if(item)item.qty+=qty;else c.push({key,name,price:Number(price),collection,qty});saveCart(c);openCart()}
+function changeCartQtyByIndex(i,d){let c=readCart();if(c[i])c[i].qty+=d;saveCart(c.filter(x=>x.qty>0))}
+function removeCartItemByIndex(i){let c=readCart();c.splice(i,1);saveCart(c)}
+function renderCart(){let c=readCart(),el=document.getElementById('cartItems');if(!el)return;document.querySelectorAll('.cart-count').forEach(x=>x.textContent=c.reduce((n,x)=>n+x.qty,0));el.innerHTML=c.length?c.map((x,i)=>`<article class="cart-item"><div><h3>${x.name}</h3><p>${x.collection} · ${money(x.price)} cada</p><div class="cart-item-controls"><button onclick="changeCartQtyByIndex(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeCartQtyByIndex(${i},1)">+</button><button class="remove-item" onclick="removeCartItemByIndex(${i})">Remover</button></div></div><strong>${money(x.price*x.qty)}</strong></article>`).join(''):'<p class="cart-empty">Seu carrinho está vazio por enquanto.</p>';let t=document.getElementById('cartTotal');if(t)t.textContent=money(c.reduce((n,x)=>n+x.price*x.qty,0))}
+function openCart(){document.getElementById('cartOverlay')?.classList.add('open');document.getElementById('cartDrawer')?.classList.add('open');document.getElementById('cartDrawer')?.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCart()}
+function closeCart(){document.getElementById('cartOverlay')?.classList.remove('open');document.getElementById('cartDrawer')?.classList.remove('open');document.getElementById('cartDrawer')?.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+function checkoutCart(){let c=readCart();if(!c.length){alert('Seu carrinho está vazio.');return}let lines=['Olá! Quero continuar meu pedido na MATÉRIA:',...c.map(x=>`${x.qty} × ${x.name} (${x.collection}) — ${money(x.price*x.qty)}`),'Subtotal: '+money(c.reduce((n,x)=>n+x.price*x.qty,0))];alert('Resumo do pedido:\n\n'+lines.join('\n'));window.open('https://instagram.com/use_materia','_blank','noopener')}
+function norm(v){return (v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
+const searchProducts=['Maré','Brisa','Brasa','Raiz'].flatMap(c=>{let s={'Maré':'mare','Brisa':'brisa','Brasa':'brasa','Raiz':'raiz'}[c];return [{name:'Difusor de ambiente 200 ml',type:'difusor',collection:c,url:s+'.html',keywords:'difusor ambiente'},{name:'Home spray 200 ml',type:'spray',collection:c,url:s+'.html',keywords:'home spray spray borrifador'},{name:'Água para lençóis 200 ml',type:'agua',collection:c,url:s+'.html',keywords:'agua agua de lencois lencol tecido'}]});
+function setupSearch(){document.querySelectorAll('.site-search').forEach(input=>{let box=document.createElement('div');box.className='search-results';box.hidden=true;input.closest('.search-box')?.appendChild(box);function run(){let q=norm(input.value);box.innerHTML='';if(!q){box.hidden=true;return}let collections=[{name:'Coleção Maré',url:'mare.html',keys:'mare'},{name:'Coleção Brisa',url:'brisa.html',keys:'brisa'},{name:'Coleção Brasa',url:'brasa.html',keys:'brasa'},{name:'Coleção Raiz',url:'raiz.html',keys:'raiz'}];let r=[];collections.forEach(c=>{if(q.length>=2 && norm(c.name+' '+c.keys).includes(q))r.push({label:c.name,sub:'Ver coleção',url:c.url})});let type=q.includes('spray')?'spray':q.includes('difusor')?'difusor':((q.includes('agua')||q.includes('lenc'))?'agua':null);let ps=type?searchProducts.filter(p=>p.type===type):searchProducts.filter(p=>norm(p.name+' '+p.collection+' '+p.keywords).includes(q));r.push(...ps.map(p=>({label:p.name,sub:'Coleção '+p.collection,url:p.url+'#produto-'+(p.type==='spray'?'spray':p.type==='agua'?'agua':'difusor')})));if(q.includes('kit')||q.includes('presente'))r.push({label:'Kits para presente',sub:'Quatro combinações · quatro aromas',url:'kits.html'});if(q.includes('personaliz'))r.push({label:'Pedidos personalizados',sub:'Criados para a sua ocasião',url:'personalizados.html'});r=r.filter((x,i,a)=>a.findIndex(y=>y.label===x.label&&y.sub===x.sub&&y.url===x.url)===i).slice(0,15);box.innerHTML=r.length?r.map(x=>`<a class="search-result" href="${x.url}"><span>${x.label}</span><small>${x.sub}</small></a>`).join(''):'<p class="search-no-results">Nenhum resultado encontrado.</p>';box.hidden=false}input.addEventListener('input',run);input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();run();let a=box.querySelector('a');if(a)location.href=a.href}if(e.key==='Escape')box.hidden=true});document.addEventListener('click',e=>{if(!input.closest('.search-box')?.contains(e.target))box.hidden=true})})}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});document.addEventListener('DOMContentLoaded',()=>{renderCart();setupSearch()});
+</script></body></html>
