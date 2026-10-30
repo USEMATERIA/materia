@@ -56,13 +56,13 @@
 @media(max-width:600px){.nav-left{display:none}.nav{padding:15px 4%}.menu-mobile{display:block;border:0;background:transparent;color:var(--blue);font:inherit;text-transform:uppercase;font-size:10px;letter-spacing:.12em}.nav-tools .search-box{display:none}.product-grid{grid-template-columns:1fr}.brand{font-size:18px!important}}
 
 /* Ajustes de navegação MATÉRIA */
-.announcement{text-align:center!important;width:100%;display:flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;letter-spacing:.18em;font-size:10px;}
+.announcement{background:var(--blue);color:#fff;text-align:center;padding:10px 20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;min-height:42px;width:100%}
 .nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;}
 .nav-left{justify-self:start}.brand{justify-self:center;text-align:center;white-space:nowrap}.nav-right{justify-self:end}.nav-tools{gap:0!important}.icon-action{gap:0!important;padding:6px!important}.icon-action .cart-label{display:none!important}.cart-count{margin-left:5px}
 @media(max-width:800px){.nav{display:flex!important;justify-content:space-between!important}.brand{position:absolute;left:50%;transform:translateX(-50%);}.nav-left{display:none!important}.nav-right>a{display:none!important}.menu-mobile{margin-left:auto}.nav-tools{margin-left:0}}
 
 /* Cabeçalho e rodapé padronizados com as páginas das coleções */
-header{background:var(--sand-light);border-bottom:1px solid var(--line);position:relative;z-index:20}
+header{position:sticky;top:0;z-index:50;background:rgba(248,245,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(24,48,74,.10)}
 .nav{max-width:1440px;margin:auto;height:86px;padding:0 5vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px}
 .nav-left,.nav-right{display:flex;gap:28px;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
 .nav-right{justify-content:flex-end}
