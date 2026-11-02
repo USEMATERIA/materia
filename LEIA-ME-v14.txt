@@ -1,0 +1,7 @@
+MATÉRIA — atualização v14
+
+- Fotos de Home Spray atualizadas com os quatro frascos na vertical, em enquadramento padronizado.
+- Banner da página inicial ajustado para exibir a foto inteira, incluindo o borrifo, sem o corte do enquadramento anterior.
+- Mantidas as demais páginas e funcionalidades da versão 13.
+
+Substitua os arquivos do site pelos arquivos deste pacote no GitHub. Preserve o arquivo CNAME existente no repositório.

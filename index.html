@@ -110,6 +110,7 @@
     .nav a:hover::after{right:0}
 
     .hero{
+      background-color:#263d43;
       min-height:78vh;
       position:relative;
       display:flex;
@@ -117,7 +118,7 @@
       overflow:hidden;
       background:
         linear-gradient(90deg,rgba(17,30,42,.60),rgba(17,30,42,.08)),
-        url("home-spray-banner.png") center/cover;
+        url("home-spray-banner.png") right center / auto 100% no-repeat;
     }
     .hero-content{
       position:relative;
@@ -714,6 +715,10 @@
  .mobile-actions{flex-direction:row!important}
 }
 
+
+    @media(max-width:700px){
+      .hero{background-position:right center!important;background-size:auto 72%!important;background-repeat:no-repeat!important;min-height:78vh;background-color:#263d43!important;}
+    }
 </style>
 </head>
 <body>
