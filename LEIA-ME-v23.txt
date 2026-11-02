@@ -1,0 +1,8 @@
+MATÉRIA — atualização v23
+
+Única alteração nesta versão:
+- Banner “Quatro formas de habitar”: substituída somente a foto pela nova imagem enviada nesta conversa (materia-quatro-colecoes.png).
+
+O layout, textos, proporções, demais imagens, páginas e funcionalidades foram mantidos como estavam na versão 22.
+
+Para publicar, substitua os arquivos do site na hospedagem pelos arquivos deste pacote, mantendo a estrutura e os nomes. Esta edição não publica automaticamente o site online.
