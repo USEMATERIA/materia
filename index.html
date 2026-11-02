@@ -719,6 +719,38 @@
     @media(max-width:700px){
       .hero{background-position:right center!important;background-size:auto 72%!important;background-repeat:no-repeat!important;min-height:78vh;background-color:#263d43!important;}
     }
+
+/* Ajustes solicitados: banner principal completo e imagem das quatro coleções sem cortes */
+.hero{
+  background-image:
+    linear-gradient(90deg,rgba(17,30,42,.60),rgba(17,30,42,.08)),
+    url("home-spray-banner.png");
+  background-position:left center, right 4vw center;
+  background-size:100% 100%, auto 88%;
+  background-repeat:no-repeat;
+}
+.editorial-image{
+  min-height:0;
+  aspect-ratio:3 / 1;
+  background-image:url("materia-quatro-colecoes.png");
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-color:var(--sand);
+  align-self:center;
+}
+@media(max-width:900px){
+  .hero{
+    background-position:left center, right 3vw center!important;
+    background-size:100% 100%, auto 76%!important;
+    background-repeat:no-repeat!important;
+  }
+  .editorial-image{aspect-ratio:3 / 1!important;background-size:contain!important;}
+}
+@media(max-width:560px){
+  .hero{background-position:left center, right 2vw center!important;background-size:100% 100%, auto 62%!important;}
+  .editorial-image{aspect-ratio:3 / 1!important;background-size:contain!important;}
+}
 </style>
 </head>
 <body>
