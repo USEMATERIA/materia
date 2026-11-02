@@ -1,0 +1,8 @@
+MATÉRIA — atualização v22
+
+Correção após conferência da versão anterior:
+- Produtos > Kits para presente: a foto kit-completo-raiz.png está vinculada ao card do Kit completo Raiz.
+- Coleções > Raiz: a foto materia-raiz-nova.png (foto do kit completo Raiz) substitui a foto anterior.
+- Banner “Quatro formas de habitar”: materia-quatro-colecoes.png é a imagem usada. O enquadramento foi corrigido para proporção panorâmica 3:1, mantendo a imagem inteira e o texto em coluna separada.
+
+Importante: o pacote contém os arquivos do site, mas não publica sozinho. Para refletir no endereço online, substitua os arquivos correspondentes na pasta raiz da hospedagem, mantendo os nomes e a mesma estrutura.

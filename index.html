@@ -759,6 +759,10 @@
   .editorial-copy{padding:3.5vw 4vw!important}
 }
 
+/* v22: banner das quatro coleções — proporção panorâmica original, sem recorte */
+.editorial{grid-template-columns:minmax(0, 72%) minmax(280px, 28%)!important;min-height:0!important;height:auto!important;align-items:center!important}
+.editorial-image{width:100%;min-height:0!important;height:auto!important;aspect-ratio:3 / 1!important;background-image:url("materia-quatro-colecoes.png")!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:var(--sand)!important}
+@media(max-width:900px){.editorial{grid-template-columns:1fr!important}.editorial-image{aspect-ratio:3 / 1!important}.editorial-copy{padding:8vw!important}}
 </style>
 </head>
 <body>
