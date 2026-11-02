@@ -1,0 +1,7 @@
+MATÉRIA — atualização do banner editorial e do kit completo Raiz (v20)
+
+- Banner “Quatro formas de habitar”: a imagem panorâmica foi ajustada para aparecer inteira, sem cortes, ocupando a maior parte do banner; a coluna do texto permanece sem imagem.
+- Coleções > Raiz: a imagem dos galhos de madeira foi substituída pela foto enviada do Kit Completo Raiz.
+- Produtos > Kits > Kit completo Raiz: a mesma foto foi adicionada ao card do produto.
+
+Para publicar, envie/substitua todos os arquivos deste pacote no mesmo diretório da hospedagem, mantendo os nomes dos arquivos.
