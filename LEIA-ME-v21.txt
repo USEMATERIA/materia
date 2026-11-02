@@ -1,0 +1,8 @@
+MATÉRIA — atualização v21
+
+Esta versão atualiza:
+- A foto do kit completo Raiz em Produtos > Kits para presente e em Produtos > Kits (imagem do kit completo Raiz).
+- A imagem da coleção Raiz na página da coleção, substituindo a foto anterior dos galhos/raízes.
+- O banner “Quatro formas de habitar” com a nova imagem das quatro essências. A imagem está configurada para aparecer inteira, sem cortes laterais.
+
+Para publicar, envie/substitua os arquivos do pacote no mesmo diretório do site hospedado, preservando os nomes dos arquivos.
