@@ -1,0 +1,7 @@
+MATÉRIA — atualização das fotos dos home sprays (v19)
+
+Esta versão substitui apenas as imagens dos home sprays MARÉ, BRISA e BRASA pelas três fotos mais recentes enviadas.
+As imagens são utilizadas nas páginas individuais das coleções (mare.html, brisa.html e brasa.html) e na página de produtos (home-spray.html).
+
+Para publicar, envie/substitua os arquivos do pacote no mesmo diretório da hospedagem do site, mantendo os nomes dos arquivos.
+Nenhuma outra página, texto, preço, fundo ou elemento visual foi alterado.
